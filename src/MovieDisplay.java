@@ -21,6 +21,17 @@ public class MovieDisplay {
     public static ArrayList<Movie> getAllMovies(){
         return Database.loadMovies("");
     }
+    
+    public static ArrayList<Movie> getNowShowing(){
+    	ArrayList<Movie> movies = getAllMovies();
+		ArrayList<Movie> nowShowingMovies = new ArrayList<Movie>();
+    	for (Movie m:movies) {
+			if (m.getStatus().equals("Now Showing")) {
+				nowShowingMovies.add(m);
+			}
+		}
+    	return nowShowingMovies;
+    }
 
     public static double getAvgRating(Movie movie){
         double averageRating;
