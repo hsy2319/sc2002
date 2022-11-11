@@ -237,17 +237,7 @@ public class IOController {
      * @param title the title to be printed
      */
     public static void printTitle(String title) {
-        int length = 65;
-        for (int i = 0; i < length; i++) System.out.print("-");
-        System.out.println();
-
-        int indent = (length - title.length()) / 2;
-        for (int i = 0; i < indent; i++) System.out.print(" ");
-        System.out.print(title);
-        for (int i = 0; i < indent; i++) System.out.print(" ");
-        System.out.println();
-
-        for (int i = 0; i < length; i++) System.out.print("-");
+        System.out.println(title);
         System.out.println();
     }
 
