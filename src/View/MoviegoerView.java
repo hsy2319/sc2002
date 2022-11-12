@@ -7,8 +7,8 @@ public class MoviegoerView extends View {
 		System.out.printf(""
 				+ "1.Search or list movies\n"
 				+ "2.Book a movie ticket\n"
-				+ "3. Go back\n");
-		int choice = scan.nextInt();
+				+ "3. Go back \n");
+		int choice= readChoice(1,3);
 		switch(choice) {
 		case 1:
 			branch(this, new MovieDisplayView());

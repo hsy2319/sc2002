@@ -18,6 +18,15 @@ public class MovieDisplay {
         }
         return null;
     }
+    
+    public static Movie searchMovieByName(ArrayList<Movie> m_list, int id){
+        for (int i = 0; i < m_list.size(); i++){
+            if (m_list.get(i).getId() == id){
+                return m_list.get(i);
+            }
+        }
+        return null;
+    }
 
     public static ArrayList<Movie> getAllMovies(){
         return Database.loadMovies("");

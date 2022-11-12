@@ -1,4 +1,3 @@
-package main;
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -9,8 +8,6 @@ package main;
  * @author Essh
  */
 import java.util.*;
-
-import View.Boundary;
 public class MovieMod extends MovieDisplay {
     public static void updateMovie(Scanner input){
         Boundary.displayMovie(getAllMovies());

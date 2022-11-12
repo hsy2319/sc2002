@@ -1,4 +1,3 @@
-package main;
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -17,9 +16,6 @@ import java.util.Scanner;
 import javax.swing.JFrame;
 import javax.swing.JButton;
 import javax.swing.JTextField;
-
-import View.Boundary;
-
 import javax.swing.JPasswordField;
 import javax.swing.JLabel;
 public class login implements ActionListener{
@@ -98,6 +94,15 @@ public class login implements ActionListener{
                                     break;
                                 case 2:
                                     MovieMod.updateMovie(input);
+                                    break;
+                                case 3:
+                                    ShowtimeMod.createCinemaShowtime(input);
+                                    break;
+                                case 4:
+                                    ShowtimeMod.updateCinemaShowtime(input);
+                                    break;
+                                case 5:
+                                    ShowtimeMod.removeCinemaShowtime(input);
                                     break;
                                 case 0:
                                     break;

@@ -101,8 +101,18 @@ public class login implements ActionListener{
                                     MovieMod.updateMovie(input);
                                     break;
                                 case 3:
+                                    ShowtimeMod.createCinemaShowtime(input);
+                                    break;
+                                case 4:
+                                    ShowtimeMod.updateCinemaShowtime(input);
+                                    break;
+                                case 5:
+                                    ShowtimeMod.removeCinemaShowtime(input);
+                                    break;
+                                case 6:
                                 	SystemSettingsView systemsettings = new SystemSettingsView();
                                 	systemsettings.start(input);
+                                
                                 	break;
                                 case 0:
                                     break;
