@@ -27,6 +27,10 @@ public class main {
     		MoviegoerView moviegoerView = new MoviegoerView();
     		moviegoerView.start(scan);
     	}
+    	else
+        {
+          System.out.println("Please enter either 1 or 2!");
+        }
 
     }
     

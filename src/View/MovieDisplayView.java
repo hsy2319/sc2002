@@ -16,7 +16,7 @@ public class MovieDisplayView extends View{
 				+ "1. Search movie\n"
 				+ "2. List all showing movies\n"
 				+ "3. List top 5 movies\n"
-				+ "4. Go back\\n");
+				+ "4. Go back\n");
 		int choice = readChoice(1,4);
 		switch(choice) {
 		case 1:

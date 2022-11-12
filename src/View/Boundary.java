@@ -1,4 +1,3 @@
-package View;
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -8,20 +7,19 @@ package View;
  *
  * @author Essh
  */
+package View;
 import java.util.*;
-
-import main.Movie;
-import main.MovieDisplay;
-
+import main.*;
 public class Boundary {
 
-    private static final String[] AdminChoice={"Create movie listing","Update movie listing","Other System Settings"};
+    private static final String[] AdminChoice={"Create movie listing","Update movie listing","Create Showtime","Update Showtime","Remove Showtime", "Other System Settings"};
 
     private static final String[] startMenu ={"Make modifications"};
 
     private static final String[] movieOptions={"movie name","language","runtime","Cast member","Synopsis","director","Status"};
 
     public static int moduleSelection(int choice, Scanner input){
+
         while(choice != 1 && choice !=0){
             System.out.println("Welcome Admin!");
             System.out.println("MOBLIMA Movie Booking System ");
@@ -125,4 +123,53 @@ public class Boundary {
 
     }
 
+//NEW
+    private static final String[] cinemaOptions={"Cinema ID","Movie ID","ShowTime","Class","MovieType"};
+    public static void displayCinemas(List<Cinema> cinemas){
+        int count=0;
+
+        System.out.format("%-6s %-10s %-20s  %-9s %-5s %n", "index", "Cinema ID", "Time", "Class", "Type");
+
+        for(Cinema cinema:cinemas){
+            System.out.format("%-6d %-10d %-20s %-9s %-5s %n", count++,  cinema.getCinemaID(), cinema.getTime(),cinema.getCinemaClass(), cinema.getMovieType());
+        }
+        System.out.println();
+    }
+ 
+    public static void displaySeating(Cinema cinema) {
+        int value;
+        int rows=10;
+        int cols=10;
+        List<Integer> seating_temp = cinema.getSeats();
+
+        System.out.print("   ");
+        for(int i=0;i<cols;i++)
+            System.out.print(i+"  ");
+        System.out.println();
+
+        for(int i=0;i<rows;i++){
+            System.out.print(i+" ");
+            for (int j=0;j<cols;j++){
+                value=i*cols + j;
+
+                int k;
+                for(k=0; k < seating_temp.size(); k++){
+                    if(seating_temp.get(k)==value){
+                        break;
+                    }
+                }
+
+                if(k == seating_temp.size()){
+                    System.out.print(" A ");
+                }else{
+                    System.out.print(" X ");
+                    seating_temp.remove(k);
+                }
+            }
+            System.out.println();
+        }
+        System.out.println("=========MOVIE SCREEN==========");
+    }
+    
+      
 }
