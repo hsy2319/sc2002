@@ -15,7 +15,7 @@ import main.MovieDisplay;
 
 public class Boundary {
 
-    private static final String[] AdminChoice={"Create movie listing","Update movie listing",};
+    private static final String[] AdminChoice={"Create movie listing","Update movie listing","Other System Settings"};
 
     private static final String[] startMenu ={"Make modifications"};
 

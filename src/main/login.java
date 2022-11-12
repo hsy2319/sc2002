@@ -1,4 +1,5 @@
 package main;
+import View.*;
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -99,6 +100,10 @@ public class login implements ActionListener{
                                 case 2:
                                     MovieMod.updateMovie(input);
                                     break;
+                                case 3:
+                                	SystemSettingsView systemsettings = new SystemSettingsView();
+                                	systemsettings.start(input);
+                                	break;
                                 case 0:
                                     break;
                                 default:

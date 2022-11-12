@@ -31,9 +31,9 @@ public class MovieShowTime {
 	{
 		Scanner input = new Scanner(System.in);
 		
-		System.out.println("Shaw Theatre: " + Arrays.toString(shaw));
-		System.out.println("Cathay Cineplex: " + Arrays.toString(cathay));
-		System.out.println("Golden Village: " + Arrays.toString(gv));
+		System.out.println("1. Shaw Theatre: " + Arrays.toString(shaw));
+		System.out.println("2. Cathay Cineplex: " + Arrays.toString(cathay));
+		System.out.println("3. Golden Village: " + Arrays.toString(gv));
         System.out.println("Select cinema to edit ('-2' to go back): ");
         
         int selection = input.nextInt();
@@ -177,6 +177,8 @@ public class MovieShowTime {
 			}
 		}
 	}
+	
+	//public static void 
 }
 
 

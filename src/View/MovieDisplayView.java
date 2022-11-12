@@ -47,6 +47,13 @@ public class MovieDisplayView extends View{
 	
 	public void topfiveMovie() {
 		//implement top five movie function;
+		SystemSettingsView settingsview= new SystemSettingsView();
+		if(settingsview.getRankbyTix() == true) {
+			//rank by rating
+		}
+		else if (settingsview.getRankbyTix() == false) {
+			//rank by ticket sales
+		}
 	}
 	
 	public void moviedetails(int movie_id) {
